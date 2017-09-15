@@ -95,7 +95,7 @@ module CS
         File.foreach(@MAXMIND_DB_FN) do |line|
             rec = line.split(',')
             next if rec[COUNTRY] != country
-            next if (rec[STATE].blank? && rec[STATE_LONG].blank?) ||  (rec[PROVINCE].blank? && rec[PROVINCE_LONG].blank?) || rec[CITY].blank?
+            next if (rec[STATE].blank? && rec[STATE_LONG].blank?) || rec[CITY].blank?
 
             # some state codes are empty: we'll use "states-replace" in these cases
             rec[STATE] = states_replace_inv[rec[STATE_LONG]] if rec[STATE].blank?
@@ -110,6 +110,13 @@ module CS
 
             # some long names are empty: we'll use "states-replace" to get the code
             rec[PROVINCE_LONG] = states_replace[rec[PROVINCE]] if rec[PROVINCE_LONG].blank?
+
+            # some provinces codes are empty: we'll use "provinces-replace" in these cases
+            rec[PROVINCE] = rec[STATE] if rec[PROVINCE].blank?
+            rec[PROVINCE] = rec[STATE_LONG] if rec[PROVINCE].blank? # there's no correspondent in states-replace: we'll use the long name as code
+
+            # some long names are empty: we'll use "states-replace" to get the code
+            rec[PROVINCE_LONG] = rec[STATE_LONG] if rec[PROVINCE_LONG].blank?
 
             # normalize
             rec[STATE] = rec[STATE].to_sym

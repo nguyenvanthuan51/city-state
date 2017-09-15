@@ -1,0 +1,992 @@
+---
+:A:
+- Agost
+- Albatera
+- Alcoy
+- Alfafara
+- Algorfa
+- Algueña
+- Alicante
+- Almoradí
+- Altea
+- Aspe
+- Benejama
+- Benejúzar
+- Beniarbeig
+- Benidoleig
+- Benidorm
+- Benijófar
+- Benimarfull
+- Benimeli
+- Benissa
+- Biar
+- Bigastro
+- Busot
+- Callosa de Ensarriá
+- Callosa de Segura
+- Calpe
+- Campello
+- Campo de Mirra
+- Castalla
+- Catral
+- Cocentaina
+- Cox
+- Crevillente
+- Daya Vieja
+- Denia
+- Dolores
+- El Verger
+- Elche
+- Elda
+- Finestrat
+- Formentera del Segura
+- Gata de Gorgos
+- Granja de Rocamora
+- Guardamar del Segura
+- Ibi
+- Jacarilla
+- Jalón
+- Jijona
+- Jávea
+- L'Albir
+- La Nucia
+- La Romana
+- Los Montesinos
+- Monforte del Cid
+- Monóvar
+- Muchamiel
+- Muro de Alcoy
+- Novelda
+- Ondara
+- Onil
+- Orba
+- Orihuela
+- Pedreguer
+- Petrel
+- Pilar de la Horadada
+- Pinoso
+- Polop
+- Redován
+- Rojales
+- San Juan de Alicante
+- San Miguel de Salinas
+- San Vicente
+- Sanet y Negrals
+- Santa Pola
+- Teulada
+- Torre de la Horadada
+- Torrevieja
+- Villajoyosa
+- Villena
+:AB:
+- Albacete
+- Almansa
+- Villarrobledo
+:AL:
+- Almería
+- El Ejido
+- Huércal Overa
+- Mojácar
+- Pulpí
+- Roquetas de Mar
+:AV:
+- Ávila
+:B:
+- Aiguafreda
+- Arbós
+- Arenys de Mar
+- Arenys de Munt
+- Argentona
+- Avinyonet
+- Aviá
+- Badalona
+- Bagá
+- Balsareny
+- Barcelona
+- Begas
+- Berga
+- Caldas de Estrach
+- Calella
+- Canet de Mar
+- Canovellas
+- Canyellas
+- Capellades
+- Cardedeu
+- Cardona
+- Castelbisbal
+- Castelldefels
+- Castelltersol
+- Castellví de Rosanés
+- Centelles
+- Cornellà de Llobregat
+- Cànoves i Samalús
+- Distrito Sant Andreu
+- Distrito de Sant Martí
+- Dosríus
+- El Bruc
+- El Prat de Llobregat
+- Esparraguera
+- Fonollosa
+- Gavà
+- Granollers
+- Gràcia
+- Guardiola
+- Hospitalet de Llobregat
+- Igualada
+- Llinás
+- Llissá de Munt
+- Malgrat de Mar
+- Manlleu
+- Manresa
+- Mataró
+- Mollet del Vallés
+- Moncada i Reixac
+- Monistrol de Montserrat
+- Montornès del Vallès
+- Mura
+- Navés
+- Odena
+- Olbán
+- Olesa de Montserrat
+- Olérdola
+- Palafolls
+- Papiol
+- Parets del Vallès
+- Pineda
+- Pla del Panadés
+- Polinyá
+- Prats de Llusanés
+- Premiá de Mar
+- Puigdalba
+- San Acisclo de Vallalta
+- San Andrés de la Barca
+- San Antonio de Vilamajor
+- San Celoni
+- San Cipriano de Vallalta
+- San Clemente de Llobregat
+- San Esteban Sasroviras
+- San Esteban de Palautordera
+- San Feliu de Codinas
+- San Feliú de Llobregat
+- San Fructuoso de Bages
+- San Pedro de Ribas
+- San Pedro de Vilamajor
+- San Pol de Mar
+- San Quirico Safaja
+- San Quirico de Besora
+- San Vicente de Castellet
+- San Vicente de Mont-Alt
+- Sant Adrià de Besòs
+- Sant Boi de Llobregat
+- Sant Cugat
+- Sant Just Desvern
+- Sant Sadurni d'Anoia
+- Santa Coloma de Gramanet
+- Santa Perpetua de Moguda
+- Santa Susana
+- Sitges
+- Tarrasa
+- Terrassa
+- Torrelavid
+- Torrellas de Llobregat
+- Vacarisses
+- Vallbona
+- Vic
+- Vilafranca del Penedès
+- Vilanova del Camí
+- Vilanova i la Geltrú
+- Vilassar de Dalt
+- Vilassar del Mar
+:BA:
+- Almendralejo
+- Badajoz
+- Cabezabuei
+- Jerez de los Caballeros
+- Mérida
+:BI:
+- Abadiño
+- Algorta
+- Amorebieta-Echano
+- Andicona
+- Arana
+- Arechalde
+- Arrigorriaga
+- Astrabudúa
+- Aulestia
+- Barakaldo
+- Bengoeche
+- Berango
+- Berriatúa
+- Bilbao
+- Bérriz
+- Campa
+- Durango
+- Echevarría
+- Elochelerri
+- Elorrio
+- Galdácano
+- Gernika-Lumo
+- Guecho
+- Górliz
+- Güeñes
+- La Cuesta
+- La Peña
+- Las Arenas
+- Lejona
+- Lequeitio
+- Marquina-Jeméin
+- Miravalles
+- Munguía
+- Ondárroa
+- Orduña
+- Plencia
+- Portugalete
+- Santurce
+- Sestao
+- Sodupe
+- Sopela
+- Valmaseda
+- Villaro
+- Yurre
+- Yurreta
+- Zaldívar
+- Zamudio
+:BU:
+- Aranda de Duero
+- Burgos
+- Miranda de Ebro
+:C:
+- Betanzos
+- Carballo
+- Cee
+- Ferrol
+- Finisterre
+- La Coruña
+- Mellid
+- Mugardos
+- Narón
+- Padrón
+- Santiago de Compostela
+- Trazo
+:CA:
+- Alcalá de los Gazules
+- Alcalá del Valle
+- Algeciras
+- Arcos de la Frontera
+- Barbate
+- Chiclana de la Frontera
+- Chipiona
+- Conil de la Frontera
+- Cádiz
+- Jerez de la Frontera
+- Jimena de la Frontera
+- La Línea de la Concepción
+- Medina-Sidonia
+- Olvera
+- Paterna de Rivera
+- Prado del Rey
+- Puerto Real
+- Puerto de Santa María
+- Rota
+- San Fernando
+- Sanlúcar de Barrameda
+- Tarifa
+- Trebujena
+- Ubrique
+- Vejer de la Frontera
+- Villaluenga del Rosario
+:CC:
+- Cáceres
+- Hervás
+- Jaraíz de la Vera
+- Plasencia
+- Trujillo
+:CE:
+- Ceuta
+:CO:
+- Cárdenas
+- Córdoba
+- Fernán Núñez
+- Montilla
+- Rute
+:CR:
+- Almadén
+- Ciudad Real
+- Puertollano
+:CS:
+- Albocacer
+- Alcala de Chivert
+- Alcora
+- Alfondeguilla
+- Almazora
+- Ayodar
+- Azuebar
+- Bechi
+- Benicarló
+- Benicásim
+- Benlloch
+- Burriana
+- Castellón de la Plana
+- Chilches
+- Jerica
+- Lucena del Cid
+- Moncofar
+- Orpesa
+- Peñíscola
+- Rosell
+- Salsadella
+- San Juan de Moro
+- Segorbe
+- Villafames
+- Villafranca del Cid
+- Villareal
+- Villavieja
+- Vinaroz
+:GC:
+- Agaete
+- Agüimes
+- Arrecife
+- Arucas
+- Carrizal de Ingenio
+- Corralejo
+- Gáldar
+- Ingenio
+- La Oliva
+- Las Palmas de Gran Canaria
+- Mogán
+- Moya
+- Playa Blanca
+- Puerto del Carmen
+- San Bartolomé de Tirajana
+- Santa Lucía de Tirajana
+- Teguise
+- Telde
+- Teror
+- Tuineje
+- Valleseco
+- Valsequillo de Gran Canaria
+- Yaiza
+:GI:
+- Aiguaviva
+- Bañolas
+- Begur
+- Blanes
+- Báscara
+- Cadaqués
+- Caldas de Malavella
+- Castillo de Aro
+- Celrá
+- Cervià de Ter
+- Corsá
+- Empuriabrava
+- Figueres
+- Fontcuberta
+- Girona
+- Llançà
+- Lloret de Mar
+- Maçanet de la Selva
+- Olot
+- Palafrugell
+- Palamós
+- Playa de Aro
+- Porqueras
+- Puigcerdà
+- Riells
+- Ripoll
+- Rosas
+- Salt
+- Sant Feliu de Guíxols
+- Sant Hilari Sacalm
+- Santa Coloma de Farnés
+- Sarriá de Ter
+- Tortellá
+- Tossa de Mar
+- Ullestret
+- Ullá
+- Vidreras
+- Vilovi de Oñar
+- la Bisbal d'Empordà
+:GR:
+- Almuñécar
+- Baza
+- Granada
+- La Zubia
+- Motril
+- Salobreña
+:GU:
+- Azuqueca
+- Guadalajara
+- Sigüenza
+:H:
+- Almonte
+- Ayamonte
+- Gibraleón
+- Huelva
+- Lepe
+- Moguer
+- Palos de la Frontera
+- Punta Umbría
+:HU:
+- Abiego
+- Ainsa
+- Ayerbe
+- Barbastro
+- Binéfar
+- Capella
+- Castillonroy
+- Esplús
+- Fraga
+- Graus
+- Hecho
+- Huesca
+- Jaca
+- Monzón
+- Sabiñánigo
+- Villanúa
+- Zaidín
+:J:
+- Baeza
+- Jaén
+- Linares
+- Úbeda
+:L:
+- Agramunt
+- Aitona
+- Albatarrech
+- Alcarrás
+- Almacelles
+- Arbeca
+- Bellpuig
+- Benavent de Lérida
+- Fuliola
+- Guisona
+- Liñola
+- Lleida
+- Mollerusa
+- Montornès
+- Pobla de Segur
+- Solsona
+- Tremp
+- Tàrrega
+- Viella Mitg Arán
+- Vilagrasa
+- la Seu d'Urgell
+:LE:
+- Astorga
+- León
+- Ponferrada
+- Sahagún
+:LO:
+- Alfaro
+- Calahorra
+- Entrena
+- Ezcaray
+- Haro
+- Logroño
+- Nájera
+- Ortigosa
+:LU:
+- Lugo
+- Monforte de Lemos
+- Ribadeo
+- Sarria
+- Villalba
+:M:
+- Alcalá de Henares
+- Alcobendas
+- Alcorcón
+- Aranjuez
+- Arganda del Rey
+- Barajas
+- Chinchón
+- Collado Villalba
+- Coslada
+- El Escorial
+- Fuenlabrada
+- Las Rozas
+- Leganés
+- Madrid
+- Majadahonda
+- Parla
+- Pinto
+- Pozuelo de Alarcón
+- San Sebastián de los Reyes
+- Torrejón de Ardoz
+- Vallekas
+:MA:
+- Antequera
+- Benalmádena
+- Estepona
+- Fuengirola
+- Marbella
+- Mijas
+- Málaga
+- Nerja
+- Ronda
+- Torremolinos
+- Vélez-Málaga
+:ML:
+- Melilla
+:MU:
+- Bolnuevo
+- Bullas
+- Calasparra
+- Cartagena
+- Cehegín
+- Fuente Álamo
+- Guadalupe de Maciascoque
+- La Manga
+- La Unión
+- Lorca
+- Lumbreras
+- Mazarrón
+- Moratalla
+- Murcia
+- San Javier
+- Yecla
+- Águilas
+:NA:
+- Alsasua
+- Bera
+- Berriozar
+- Burguete
+- Burlada
+- Caparroso
+- Cintruénigo
+- Estella
+- Eugui
+- Huarte
+- Irurita
+- Iza
+- Lanz
+- Leiza
+- Lumbier
+- Pamplona
+- Peralta
+- Santesteban
+- Sumbilla
+- Villava
+:O:
+- Aller
+- Arriondas
+- Avilés
+- Cadavedo
+- Cangas de Onís
+- Cudillero
+- Gijón
+- Grado
+- Langreo
+- Laviana
+- Llanes
+- Luanco
+- Luarca
+- Oviedo
+- Pola de Lena
+- Ribadesella
+- Salas
+- Sariego
+- Teverga
+- Tineo
+- Villayón
+:OR:
+- Allariz
+- Orense
+:P:
+- Lomas de Campos
+- Palencia
+:PM:
+- Alaró
+- Alayor
+- Alcúdia
+- Algaida
+- Andratx
+- Artà
+- Binissalem
+- Bunyola
+- Cala Millor
+- Cala Rajada
+- Calonge
+- Calvià
+- Campos
+- Can Picafort
+- Capdepera
+- Ciudadela
+- Colònia de Sant Pere
+- Consell
+- Costitx
+- El Arenal
+- Esporles
+- Felanitx
+- Ibiza
+- Inca
+- Lloseta
+- Llubí
+- Llucmajor
+- Mallorca
+- Manacor
+- Marratxí
+- Maó
+- Menorca
+- Montuïri
+- Muro
+- Palma
+- Petra
+- Pollença
+- Porreras
+- Port d'Andratx
+- Port de Pollença
+- Porto Cristo
+- Portocolom
+- San Antonio
+- San Jose de la Atalaya
+- San José
+- San Luis
+- Sant Francesc de Formentera
+- Santa Eugènia
+- Santa Eulalia del Río
+- Santa Margarita
+- Santa Ponsa
+- Santanyí
+- Selva
+- Sencelles
+- Ses Salines
+- Sineu
+- Son Carrió
+- Son Servera
+- Son Verí
+- Sóller
+- Valldemossa
+- Vilafranca de Bonany
+- Villacarlos
+- s'Alqueria Blanca
+- sa Pobla
+:PO:
+- Arbo
+- Baiona
+- Cambados
+- Catoira
+- El Grove
+- La Guardia
+- Lagoa
+- Pontevedra
+- Redondela
+- Sangenjo
+- Tuy
+- Vigo
+:S:
+- Castro-Urdiales
+- Laredo
+- Los Corrales de Buelna
+- San Cibrián
+- Santander
+- Torrelavega
+:SA:
+- Ciudad Rodrigo
+- Salamanca
+- Santa Marta de Tormes
+:SE:
+- Alcalá de Guadaíra
+- Aljarafe
+- Carmona
+- Coria del Río
+- Dos Hermanas
+- Gines
+- Lebrija
+- Marchena
+- Morón de la Frontera
+- Sevilla
+- Écija
+:SG:
+- La Granja
+- Melque
+- Segovia
+:SO:
+- Medinaceli
+- San Esteban de Gormaz
+:SS:
+- Alcibar
+- Alegría de Oria
+- Alquiza
+- Andoain
+- Anzuola
+- Aquerregui
+- Arechavaleta
+- Asteasu
+- Ataun
+- Aya
+- Azcoitia
+- Azpeitia
+- Beasáin
+- Berrobi
+- Campo Ibarra
+- Cestona
+- Deva
+- Eibar
+- Elgueta
+- Elgóibar
+- Escoriaza
+- Fuenterrabía
+- Guetaria
+- Hernani
+- Iciar
+- Irún
+- Isasondo
+- La Florida
+- Lasarte-Oria
+- Legazpia
+- Lezo
+- Mondragón
+- Motrico
+- Mutiloa
+- Ordizia
+- Oyarzun
+- Oñate
+- Pasajes
+- Pasajes
+- Pasajes
+- Pasajes
+- Placencia de las Armas
+- Rentería
+- Ría
+- San Sebastián
+- Tolosa
+- Urretxu
+- Usúrbil
+- Vergara
+- Villabona
+- Zaldivia
+- Zarauz
+- Zumaya
+- Zumárraga
+:T:
+- Albiol
+- Albiñana
+- Aleixar
+- Amposta
+- Bellvey
+- Benisanet
+- Borjas del Campo
+- Calafell
+- Cambrils
+- Catllar
+- El Vendrell
+- Espluga de Francolí
+- Fatarella
+- Gandesa
+- García
+- Guiamets
+- Horta de San Juan
+- L'Hospitalet de l'Infant
+- La Selva del Campo
+- Montblanch
+- Montbrio de Tarragona
+- Mora de Ebro
+- Morell
+- Pallaresos
+- Pobla de Mafumet
+- Pobla de Montornés
+- Reus
+- Roda de Barà
+- Roquetas
+- Salou
+- San Carlos de la Rápita
+- Santa Perpètua
+- Sarreal
+- Tarragona
+- Tivisa
+- Torre de Fontaubella
+- Tortosa
+- Valls
+- Vilallonga
+- Viñols y Archs
+- l'Ametlla de Mar
+:TE:
+- Alcañiz
+- Cretas
+- Teruel
+- la Fresneda
+:TF:
+- Acantilado de los Gigantes
+- Adeje
+- Arona
+- Buenavista del Norte
+- Candelaria
+- El Sauzal
+- Garachico
+- Granadilla de Abona
+- Guía de Isora
+- Icod de los Vinos
+- La Guancha
+- La Matanza de Acentejo
+- La Victoria de Acentejo
+- Orotava
+- Puerto de la Cruz
+- San Cristóbal de La Laguna
+- San Miguel De Abona
+- San Sebastián de La Gomera
+- Santa Cruz de La Palma
+- Santa Cruz de Tenerife
+- Santa Úrsula
+- Santiago del Teide
+- Tacoronte
+- Tegueste
+:TO:
+- Toledo
+:V:
+- Agullent
+- Alacuás
+- Albaida
+- Albal
+- Albalat de Taronchers
+- Albalat de la Ribera
+- Alberique
+- Alborache
+- Alboraya
+- Albuixech
+- Alcira
+- Alcudia de Crespins
+- Aldaya
+- Alfafar
+- Alfara del Patriarca
+- Alfarp
+- Alfarrasí
+- Algemesí
+- Alginet
+- Almusafes
+- Almácera
+- Anna
+- Antella
+- Ayelo de Malferit
+- Ayora
+- Barcheta
+- Benaguacil
+- Benagéber
+- Benegida
+- Benicolet
+- Benifayó
+- Benigánim
+- Benimamet
+- Beniparrell
+- Benisanó
+- Bicorp
+- Bocairente
+- Buñol
+- Bétera
+- Canals
+- Canet de Berenguer
+- Carcagente
+- Carlet
+- Casinos
+- Catarroja
+- Caudete de las Fuentes
+- Cheste
+- Chirivella
+- Chiva
+- Cofrentes
+- Cortes de Pallás
+- Cuatretonda
+- Cullera
+- Cárcer
+- Dos Aguas
+- Emperador
+- Estivella
+- Faura
+- Fortaleny
+- Gandía
+- Gilet
+- Godella
+- Godelleta
+- Jarafuel
+- Jeresa
+- Játiva
+- La Eliana
+- Liria
+- Llombay
+- Macastre
+- Manises
+- Meliana
+- Millares
+- Mislata
+- Moncada
+- Monserrat
+- Montesa
+- Montroy
+- Museros
+- Náquera
+- Oliva
+- Ollería
+- Olocau
+- Onteniente
+- Paiporta
+- Palma de Gandía
+- Palmera
+- Paterna
+- Pedralba
+- Picasent
+- Picaña
+- Piles
+- Puerto de Sagunto
+- Puig
+- Puzol
+- Rafelguaraf
+- Requena
+- Ribarroja
+- Riola
+- Rocafort
+- Sagunto
+- Sedaví
+- Segart
+- Serra
+- Silla
+- Sollana
+- Sueca
+- Tabernes Blanques
+- Tabernes de Valldigna
+- Torrente
+- Tous
+- Turís
+- Utiel
+- Valencia
+- Vallada
+- Vallés
+- Villalonga
+- Villamarchante
+- Villanueva de Castellón
+- Villar del Arzobispo
+- Villargordo del Cabriel
+- Vinalesa
+- Yátova
+- Énova
+:VA:
+- Tordesillas
+- Valladolid
+:VI:
+- Abechuco
+- Ali
+- Amurrio
+- Berantevilla
+- Gáceta
+- Laguardia
+- Lanciego
+- Leza
+- Llodio
+- Marquina
+- Nanclares de la Oca
+- Oyón
+- Respaldiza
+- Salvatierra
+- Sarría
+- Villarreal
+- Vitoria
+- Zambrana
+:Z:
+- Belchite
+- Calatayud
+- Caspe
+- Egea de los Caballeros
+- Fabara
+- Mequinenza
+- Zaragoza
+:ZA:
+- Toro
+- Zamora
