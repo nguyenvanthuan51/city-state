@@ -9,7 +9,7 @@ module CS
     @MAXMIND_DB_FN = File.join(FILES_FOLDER, "#{MAXMIND_FILE_NAME}#{@MAXMIND_LOCALE}.csv")
     COUNTRIES_FN = File.join(FILES_FOLDER, 'countries.yml')
 
-    @countries, @states, @provinces, @cities, @cities_provinces = [{}, {}, {}]
+    @countries, @states, @cities, @provinces, @province_cities = [{}, {}, {}, {}, {}]
     @current_country = nil # :US, :BR, :GB, :JP, ...
 
     def self.set_locale(locale)
@@ -51,7 +51,7 @@ module CS
             install(state_fn.split('.').last.upcase.to_sym) # reinstall country
         end
 
-        @countries, @states, @provinces, @cities, @cities_provinces = [{}, {}, {}] # invalidades cache
+        @countries, @states, @cities, @provinces, @province_cities = [{}, {}, {}, {}, {}]
         File.delete COUNTRIES_FN # force countries.yml to be generated at next call of CS.countries
         true
     end
@@ -82,21 +82,20 @@ module CS
         states_replace_inv = states_replace.invert # invert key with value, to ease the search
 
         # some province codes are empty: we'll use "provinces-replace" in these cases
-        # provinces_replace_fn = File.join(FILES_FOLDER, 'provinces-replace.yml')
-        # provinces_replace = YAML.load_file(provinces_replace_fn).symbolize_keys
-        # provinces_replace = provinces_replace[country.to_sym] || {} # we need just this country
-        # provinces_replace_inv = provinces_replace.invert # invert key with value, to ease the search
+        provinces_replace_fn = File.join(FILES_FOLDER, 'provinces-replace.yml')
+        provinces_replace = YAML.load_file(provinces_replace_fn).symbolize_keys
+        provinces_replace = provinces_replace[country.to_sym] || {} # we need just this country
+        provinces_replace_inv = provinces_replace.invert # invert key with value, to ease the search
 
         # read CSV line by line
         cities = {}
-        # cities_provinces = {}
+        province_cities = {}
         states = {}
-        # provinces = {}
+        provinces = {}
         File.foreach(@MAXMIND_DB_FN) do |line|
             rec = line.split(',')
             next if rec[COUNTRY] != country
-            next if (rec[STATE].blank? && rec[STATE_LONG].blank?) || rec[CITY].blank?
-            # || (rec[PROVINCE].blank? && rec[PROVINCE_LONG].blank?)
+            next if (rec[STATE].blank? && rec[STATE_LONG].blank?) ||  (rec[PROVINCE].blank? && rec[PROVINCE_LONG].blank?) || rec[CITY].blank?
 
             # some state codes are empty: we'll use "states-replace" in these cases
             rec[STATE] = states_replace_inv[rec[STATE_LONG]] if rec[STATE].blank?
@@ -106,26 +105,26 @@ module CS
             rec[STATE_LONG] = states_replace[rec[STATE]] if rec[STATE_LONG].blank?
 
             # some provinces codes are empty: we'll use "provinces-replace" in these cases
-            # rec[PROVINCE] = provinces_replace_inv[rec[PROVINCE_LONG]] if rec[PROVINCE].blank?
-            # rec[PROVINCE] = rec[PROVINCE_LONG] if rec[PROVINCE].blank? # there's no correspondent in states-replace: we'll use the long name as code
+            rec[PROVINCE] = provinces_replace_inv[rec[PROVINCE_LONG]] if rec[PROVINCE].blank?
+            rec[PROVINCE] = rec[PROVINCE_LONG] if rec[PROVINCE].blank? # there's no correspondent in states-replace: we'll use the long name as code
 
             # some long names are empty: we'll use "states-replace" to get the code
-            # rec[PROVINCE_LONG] = states_replace[rec[PROVINCE]] if rec[PROVINCE_LONG].blank?
+            rec[PROVINCE_LONG] = states_replace[rec[PROVINCE]] if rec[PROVINCE_LONG].blank?
 
             # normalize
             rec[STATE] = rec[STATE].to_sym
-            # rec[PROVINCE] = rec[PROVINCE].to_sym
+            rec[PROVINCE] = rec[PROVINCE].to_sym
             rec[CITY].delete!('"') # sometimes names come with a "\" char
             rec[STATE_LONG].delete!('"') # sometimes names come with a "\" char
-            # rec[PROVINCE_LONG].delete!('"') # sometimes names come with a "\" char
+            rec[PROVINCE_LONG].delete!('"') # sometimes names come with a "\" char
 
             # cities list: {TX: ["Texas City", "Another", "Another 2"]}
             cities[rec[STATE]] = [] unless states.key?(rec[STATE])
             cities[rec[STATE]] << rec[CITY]
 
             # cities list: {TX: ["Texas City", "Another", "Another 2"]}
-            # cities_provinces[rec[PROVINCE]] = [] unless provinces.key?(rec[PROVINCE])
-            # cities_provinces[rec[PROVINCE]] << rec[CITY]
+            province_cities[rec[PROVINCE]] = [] unless provinces.key?(rec[PROVINCE])
+            province_cities[rec[PROVINCE]] << rec[CITY]
 
             # states list: {TX: "Texas", CA: "California"}
             unless states.key?(rec[STATE])
@@ -134,30 +133,30 @@ module CS
             end
 
             # provinces list: {TX: "Texas", CA: "California"}
-            # unless provinces.key?(rec[PROVINCE])
-            #     province = { rec[PROVINCE] => rec[PROVINCE_LONG] }
-            #     provinces.merge!(province)
-            # end
+            unless provinces.key?(rec[PROVINCE])
+                province = { rec[PROVINCE] => rec[PROVINCE_LONG] }
+                provinces.merge!(province)
+            end
         end
 
         # sort
         cities = Hash[cities.sort]
-        # cities_provinces = Hash[cities_provinces.sort]
+        province_cities = Hash[province_cities.sort]
         states = Hash[states.sort]
-        # provinces = Hash[provinces.sort]
+        provinces = Hash[provinces.sort]
         cities.each { |k, _v| cities[k].sort! }
-        # cities_provinces.each { |k, _v| cities_provinces[k].sort! }
+        province_cities.each { |k, _v| province_cities[k].sort! }
 
         # save to states.us and cities.us
         states_fn = File.join(FILES_FOLDER, "states.#{country.downcase}")
-        # provinces_fn = File.join(FILES_FOLDER, "provinces.#{country.downcase}")
-        # cities_provinces_fn =  File.join(FILES_FOLDER, "cities_provinces.#{country.downcase}")
+        provinces_fn = File.join(FILES_FOLDER, "provinces.#{country.downcase}")
+        province_cities_fn =  File.join(FILES_FOLDER, "province_cities.#{country.downcase}")
         cities_fn = File.join(FILES_FOLDER, "cities.#{country.downcase}")
         File.open(states_fn, 'w') { |f| f.write states.to_yaml }
-        # File.open(provinces_fn, 'w') { |f| f.write provinces.to_yaml }
-        # File.open(cities_provinces_fn, 'w') { |f| f.write cities_provinces.to_yaml }
+        File.open(provinces_fn, 'w') { |f| f.write provinces.to_yaml }
+        File.open(province_cities_fn, 'w') { |f| f.write province_cities.to_yaml }
         File.open(cities_fn, 'w') { |f| f.write cities.to_yaml }
-        File.chmod(0o666, states_fn, provinces_fn, cities_fn) # force permissions to rw_rw_rw_ (issue #3)
+        File.chmod(0o666, states_fn, provinces_fn, cities_fn, province_cities_fn) # force permissions to rw_rw_rw_ (issue #3)
         true
     end
 
@@ -199,33 +198,33 @@ module CS
         @cities[country][state.to_s.upcase.to_sym] || []
     end
 
-    # def self.cities_provinces(province, country = nil)
-    #     self.current_country = country if country.present? # set as current_country
-    #     country = current_country
-    #
-    #     # load the country file
-    #     if @cities_provinces[country].blank?
-    #         cities_provinces_fn = File.join(FILES_FOLDER, "cities_provinces.#{country.to_s.downcase}")
-    #         install(country) unless File.exist? cities_provinces_fn
-    #         @cities_provinces[country] = YAML.load_file(cities_provinces_fn).symbolize_keys
-    #     end
-    #
-    #     @cities_provinces[country][province.to_s.upcase.to_sym] || []
-    # end
-    #
-    # def self.provinces(country)
-    #     self.current_country = country # set as current_country
-    #     country = current_country # normalized
-    #
-    #     # load the country file
-    #     if @provinces[country].blank?
-    #         provinces_fn = File.join(FILES_FOLDER, "provinces.#{country.to_s.downcase}")
-    #         install(country) unless File.exist? provinces_fn
-    #         @provinces[country] = YAML.load_file(provinces_fn).symbolize_keys
-    #     end
-    #
-    #     @provinces[country] || {}
-    # end
+    def self.province_cities(province, country = nil)
+        self.current_country = country if country.present? # set as current_country
+        country = current_country
+
+        # load the country file
+        if @province_cities[country].blank?
+            province_cities_fn = File.join(FILES_FOLDER, "province_cities.#{country.to_s.downcase}")
+            install(country) unless File.exist? province_cities_fn
+            @province_cities[country] = YAML.load_file(province_cities_fn).symbolize_keys
+        end
+
+        @province_cities[country][province.to_s.upcase.to_sym] || []
+    end
+
+    def self.provinces(country)
+        self.current_country = country # set as current_country
+        country = current_country # normalized
+
+        # load the country file
+        if @provinces[country].blank?
+            provinces_fn = File.join(FILES_FOLDER, "provinces.#{country.to_s.downcase}")
+            install(country) unless File.exist? provinces_fn
+            @provinces[country] = YAML.load_file(provinces_fn).symbolize_keys
+        end
+
+        @provinces[country] || {}
+    end
 
     def self.states(country)
         self.current_country = country # set as current_country
